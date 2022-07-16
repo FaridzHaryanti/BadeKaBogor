@@ -1,0 +1,151 @@
+body{
+    background-image: linear-gradient(135deg, #19BAE8 20%, #113E7E 70%);
+    background-size: cover;
+}
+
+
+.bg-purple{
+    background-color: purple !important;
+}
+.bi-bi-chat-left{
+    background-color: aliceblue;
+}
+.header{
+    color: #75c5e0;
+}
+.box{
+    padding: 30px;
+}
+.logo img{
+    border-radius: 10px;
+    margin-right: 10px;
+    width:40px;
+    height:40px; 
+}
+.dropdown-menu{
+    transform: translate(-90%, 0%);
+}
+.icon12 i{
+    margin-right: 15px;
+}
+.icon12 img{
+    border-radius: 50px;
+    margin-right: 10px;
+    width:20px;
+    height:20px; 
+}
+.nav-item a:hover{
+    background: rgb(97, 7, 97);
+}
+
+.nav-item i{
+    margin-right: 20px;
+}
+.nav-item1{
+    background-color: rgb(59, 58, 58);
+}
+.nav-item2{
+    background-color: rgb(59, 58, 58);
+}
+.display-5{
+    font-weight: 600;
+}
+.courses{ 
+    transform: translate(37%, -192%);
+
+}
+.drop-1{
+    margin-left: 380px;
+    border: none;
+    height: 5px;
+}
+.info{
+    transform: translate(37%, -243%);
+   
+}
+.info p{
+    margin-left: 50px;
+    margin-top: 40px;
+   
+    font-size: 16px;
+    font-weight: 600;
+}
+.info img{
+    width: 180px;
+    transform: translate(140%, -40%);
+
+}
+.info a{
+    transform: translate(40%, -190%) !important;
+    border-radius: 5px;
+}
+.row-2{
+    background-color: rgb(239, 238, 238);
+    border-radius: 5px;
+    font-size: 20px; 
+}
+.row-3{
+    padding-top: 20px;
+    margin-left: 20px;
+    padding-bottom: 20px;
+    border-radius: 20px;
+}
+.col-2{
+    margin-left: 20px;
+    padding-bottom: 20px;
+}
+.glo i{
+    top: 10px;
+    right: 10px;
+    font-size: 35px;
+    border-radius: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+   
+}
+.glo {
+   margin-top: 30px;
+   margin-left: 15px;
+   display: flex;
+}
+.glo p{
+    margin-left: 20px;
+}
+.card-body a{
+   transform: translate(290%, 60%);
+   margin-left: 10cm;
+}
+.biling{
+    transform: translate(74%, -367%);
+    color: purple;
+}
+
+.card-icon{
+    position: absolute;
+    top: 65px;
+    right: 105px;
+    opacity: 0.5;
+    font-size: 110px;
+}
+.infokelas{
+    margin-left: 80px;
+}
+.copy{
+    text-align: center;
+    transform: translate(0%, -3659%);
+}
+
+.card img{
+    align-items: center;
+    padding-left: 30px;
+    padding-top: 20px;
+    border: #75c5e0;
+
+}
+
+.row{
+    padding-bottom: 30px;
+}
+.row flex-nowrap{
+    padding: 10px;
+}

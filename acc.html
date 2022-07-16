@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./assets/media/logo.png" type="image/png">
+    <title>Profile</title>
+
+    <link rel="stylesheet" href="./profile/assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./profile/assets/font/bootstrap-icons.css" />
+    <script src="./profile/assets/js/bootstrap.bundle.min.js"></script>
+
+    <link rel="stylesheet" href="./profile/assets/css/styles.main.css" />
+    <script src="./profile/assets/js/jquery.min.js"></script>
+    <script src="./profile/assets/js/const/Account.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        var nameSplit = MyAccount.name.split(" ");
+        $(".username").text(nameSplit[0]);
+        $(".npm").text(MyAccount.id);
+        $("[data-toggle=sidebar-colapse]").click(function () {
+          SidebarCollapse();
+        });
+      });
+
+      function SidebarCollapse() {
+        $(".menu-collapsed").toggleClass("d-none");
+        $(".sidebar-submenu").toggleClass("d-none");
+        $(".submenu-icon").toggleClass("d-none");
+        $("#sidebar-container").toggleClass(
+          "sidebar-expanded sidebar-collapsed"
+        );
+
+        // Treating d-flex/d-none on separators with title
+        var SeparatorTitle = $(".sidebar-separator-title");
+        if (SeparatorTitle.hasClass("d-flex")) {
+          SeparatorTitle.removeClass("d-flex");
+        } else {
+          SeparatorTitle.addClass("d-flex");
+        }
+
+        // Collapse/Expand icon
+        $("#collapse-icon").toggleClass(
+          "fa-angle-double-left fa-angle-double-right"
+        );
+      }
+    </script>
+  </head>
+  <body>
+    <!-- HEADER NAVIGATION -->
+    <header>
+        <nav class="navbar navbar-expand-lg bg-light">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">
+                <img src="./assets/media/logo.png" alt="" width="30" height="35">
+              </a>
+              <a class="navbar-brand" href="#" style="color: black;">Bade Ka <b>Bogor</b></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent" ></div>
+                <form class="d-flex" role="search justify-content-center">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit"><i class="bi bi-search"></i></button>
+                 </form>
+                 <a href="" style="color: black;"> <h1 style="margin-left: 10px; margin-top: 6px;" ><i class="bi bi-plus-square" ></i></h1></a>
+                 <a href="" style="color: black;"> <h1 style="margin-left: 15px; margin-top: 6px;" ><i class="bi bi-person-circle" ></i></h1></a>
+                
+              </div>
+            </div>
+          </nav>
+      </header>
+    <!-- END HEADER NAVIGATION -->
+
+    
+    <main class="row" id="main-section">
+    <!-- COLUMN LEFT -->
+      <!-- NAVIGASI ON SIDEBAR -->
+      <nav id="sidebar-container" class="sidebar-expanded d-none d-lg-block">
+        <ul class="nav list-group">
+          <!-- NAV TITLE ACADEMIC -->
+          <li class="list-group-item sidebar-separator-title text-muted d-flex align-items-center menu-collapsed" >
+            <small class="text-white ">Username</small>
+          </li>
+          <span></span>
+          <li class="avatar">
+            <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava2-bg.webp"
+                    class="rounded-circle img-fluid align-items-center me-4" style="width: 50px;;" />
+          </li>
+          <!-- END NAV TITLE ACADEMIC -->
+
+          <!-- NAV DASHBOARD -->
+          <li>
+            <a class="bg-dark list-group-item active list-group-item-action flex-column align-items-start" href="Destination.html" >
+              <div class="d-flex w-100 justify-content-start align-items-center" >
+                <span class="bi bi-house-door me-3"></span>
+                <span class="menu-collapsed">Explore Bogor</span>
+              </div>
+            </a>
+          </li>
+          <!-- END  NAV DASHBOARD -->
+
+          <!-- NAV RE-REGISTRATION -->
+          <li>
+            <a
+              class="bg-dark list-group-item list-group-item-action flex-column align-items-start "
+              data-bs-toggle="collapse"
+              href="#submenuRereg"
+              role="button"
+              aria-expanded="false"
+              aria-controls="collapseExample"
+            >
+              <div class="d-flex w-100 justify-content-start align-items-center" >
+                <i class="bi bi-pencil-square me-3"></i>
+                <span class="menu-collapsed d-flex w-100">
+                  <span>
+                    Edit Avatar
+                  </span>
+                  <i class="bi bi-caret-down-fill ms-auto"></i>
+                </span>
+                
+              </div>
+            </a>
+
+            <!-- DROPDOWN MY ATTENDANCE -->
+            <div class="collapse" id="submenuRereg">
+              <a
+                href="pcf.html"
+                class="list-group-item list-group-item-action bg-dark text-white"
+              >
+                <span class="menu-collapsed">Remove Avatar</span>
+              </a>
+              <a
+                href="coourse-plan.html"
+                class="list-group-item list-group-item-action bg-dark text-white"
+              >
+                <span class="menu-collapsed">Change </span>
+              </a>
+            </div>
+            <!-- END DROPDOWN MY ATTENDANCE -->
+          </li>
+          <!-- END NAV RE-REGISTRATION -->
+          
+
+          <!-- NAV SCORE AND GRADE -->
+          <li>
+            <a
+              class="bg-dark list-group-item list-group-item-action flex-column align-items-start"
+              data-bs-toggle="collapse"
+              href="#submenuScore"
+              role="button"
+              aria-expanded="false"
+              aria-controls="collapseExample"
+            >
+              <div class="d-flex w-100 justify-content-start align-items-center" >
+                <i class="bi bi-gear me-3"></i>
+                <span class="menu-collapsed d-flex w-100">
+                  Setting
+                  <i class="bi bi-caret-down-fill ms-auto"></i>
+                </span>
+              </div>
+            </a>
+
+            <!-- DROPDOWN SCORE AND GRADE -->
+            <div class="collapse" id="submenuScore">
+              <a
+                href="#"
+                class="list-group-item list-group-item-action bg-dark text-white"
+              >
+                <span class="menu-collapsed">Change username</span>
+              </a>
+
+              <a
+              href="#"
+              class="list-group-item list-group-item-action bg-dark text-white"
+            >
+              <span class="menu-collapsed">Change email</span>
+            </a>
+
+              <a
+                href="#"
+                class="list-group-item list-group-item-action bg-dark text-white"
+              >
+                <span class="menu-collapsed">Change password</span>
+              </a>
+            </div>
+            <!-- END DROPDOWN SCORE AND GRADE -->
+          </li>
+          <!-- END NAV SCORE AND GRADE -->
+          
+
+          <!-- NAV TITLE about me -->
+          <li class="list-group-item sidebar-separator-title text-muted d-flex align-items-center menu-collapsed" >
+            <small class="text-white">About me</small>
+          </li>
+          <!-- END NAV TITLE about me -->
+
+          <!-- NAV BILLING -->
+          <li>
+            <a href="billing.html" class="bg-dark list-group-item list-group-item-action">
+              <div
+                class="d-flex w-100 justify-content-start align-items-center"
+              >
+                <span class="bi bi-chat-dots me-3"></span>
+                <span class="menu-collapsed">Contact me</span>
+              </div>
+            </a>
+          </li>
+          <!-- END NAV contact me -->
+
+           <!-- NAV log out -->
+           <li>
+            <a href="index.html" class="bg-dark list-group-item list-group-item-action">
+              <div
+                class="d-flex w-100 justify-content-start align-items-center"
+              >
+                <span class="bi bi-box-arrow-in-right me-3"></span>
+                <span class="menu-collapsed">Log Out</span>
+              </div>
+            </a>
+          </li>
+          <!-- END NAV log out -->
+
+          <!-- NAV log out -->
+          <li>
+            <a href="#" class="bg-dark list-group-item list-group-item-action">
+              <div
+                class="d-flex w-100 justify-content-start align-items-center"
+              >
+                <span class="bi bi-question-square me-3"></span>
+                <span class="menu-collapsed">Questions</span>
+              </div>
+            </a>
+          </li>
+          <!-- END NAV log out -->
+        </ul>
+      </nav>
+      <!-- END NAVIGASI ON SIDEBAR -->
+    <!-- END COLUMN LEFT -->
+
+    <!-- COLUMN RIGHT -->
+      <section class="col px-0" style="background-color:white ;">
+        <!-- BREADCRUMB -->
+        <div>
+            <h1></h1>
+        </div>
+        <!-- END BREADCRUMB -->
+        
+        <!-- CONTENT -->
+        
+        <div class="container">
+        <div class="row">
+            <div class="col-xl-6 col-lg-6 col-xs-12" style="margin-top: 30px;">
+              <div class="card">
+                <img src="./assets/media/saat.jpg" class="card-img-top" alt="TOP02" style="width:60%; margin:auto; padding-top: 1cm;" >
+                <div class="card-body">
+                  <div class="card-body">
+                    <button type="button" class="btn btn-outline-primary" style="margin-right: 10px;"><i class="bi bi-chat-dots"></i></button>
+                    <button type="button" class="btn btn-outline-primary" style="margin-right: 10px;"><i class="bi bi-heart-fill"></i></button>
+                    <button type="button" class="btn btn-outline-primary" style="margin-right: 10px;"><i class="bi bi-share"></i></button>
+                    <button type="button" class="btn btn-outline-primary" style="margin-right: 10px;"><i class="bi bi-bookmark"></i></button>
+                    <button href="https://goo.gl/maps/UVBrtheMR4FbRwkB8" type="button" class="btn btn-primary" style="margin-right: 10px;"><i class="bi bi-geo-alt-fill"></i>
+                    </button>
+                  </div>
+                  <h5 class="card-title">Telaga Saat</h5>
+                  <p class="card-text">Telaga Saat seringkali disebut sebagai keindahan tersembunyi di Puncak, Bogor. Telaga wisata ini memang belum terlalu populer di kalangan wisatawan.
+                    Kebanyakan lebih mengenal Telaga Warna.</p>
+                </div>
+              </div>
+            </div>
+    
+            <div class="col-xl-6 col-lg-6 col-xs-12" style="margin-top: 30px;">
+              <div class="card">
+                <img src="./assets/media/288201008_1630627360671862_8574893583805559297_n.jpg" class="card-img-top" alt="TOP02" style="width:60%; margin:auto; padding-top: 1cm;" >
+                <div class="card-body">
+                  <div class="card-body">
+                    <button type="button" class="btn btn-outline-primary" style="margin-right: 10px;"><i class="bi bi-chat-dots"></i></button>
+                    <button type="button" class="btn btn-outline-primary" style="margin-right: 10px;"><i class="bi bi-heart-fill"></i></button>
+                    <button type="button" class="btn btn-outline-primary" style="margin-right: 10px;"><i class="bi bi-share"></i></button>
+                    <button type="button" class="btn btn-outline-primary" style="margin-right: 10px;"><i class="bi bi-bookmark"></i></button>
+                    <button href="https://goo.gl/maps/UVBrtheMR4FbRwkB8" type="button" class="btn btn-primary" style="margin-right: 10px;"><i class="bi bi-geo-alt-fill"></i>
+                    </button>
+                  </div>
+                  <h5 class="card-title">Kopi Daong</h5>
+                  <p class="card-text">Pemandangan alami dengan hijaunya perbukitan dikelilingi pohon-pohon pinus yang bertebaran
+                    menjadi titik ketertarikan para wisatawan untuk menikmati wisata Kopi Daong dan Kuliner Bogor.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+                <!-- END CONTENT -->
+    <!-- END COLUMN RIGHT -->
+    </main>
+  </body>
+</html>

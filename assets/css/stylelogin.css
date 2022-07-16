@@ -1,0 +1,13 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    border-radius: 10px;
+    transform: translate(0%, 50%);
+    background: rgb(209, 209, 209);
+    padding: 25px 150x 25px 15px;
+    width: 450px;
+    height: 440px;
+}
+

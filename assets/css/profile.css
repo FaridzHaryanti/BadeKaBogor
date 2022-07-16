@@ -1,0 +1,13 @@
+.container{
+    display: flex;
+    min-height: 100pv;
+}
+
+.sidebar{
+    background-color: aqua;
+    width: 260px;
+    padding: 24px;
+    display: flex;
+    box-sizing: border-box;
+     
+}
